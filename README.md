@@ -25,6 +25,14 @@ This project is an open source, offline project, and all members of SvcDevelopTe
 
 > Updated the 4.0-v2 model, the entire process is the same as 4.0. Compared to 4.0, there is some improvement in certain scenarios, but there are also some cases where it has regressed. Please refer to the [4.0-v2 branch](https://github.com/svc-develop-team/so-vits-svc/tree/4.0-v2) for more information.
 
+## 📝 4.0 Feature list of branches
+
+| Branch        |     Feature      |  whether compatible with the main branch model |
+| :-------------: | :----------: | :------------:    |
+| 4.0              |   main branch   |        -     |
+| 4.0v2        |  The VISinger2 model is used  |        incompatibility     |
+| 4.0-Vec768-Layer12    |  The feature input is the Layer 12 Transformer output of the Content Vec  |       incompatibility     |
+
 ## 📝 Model Introduction
 
 The singing voice conversion model uses SoftVC content encoder to extract source audio speech features, then the vectors are directly fed into VITS instead of converting to a text based intermediate; thus the pitch and intonations are conserved. Additionally, the vocoder is changed to [NSF HiFiGAN](https://github.com/openvpi/DiffSinger/tree/refactor/modules/nsf_hifigan) to solve the problem of sound interruption.
@@ -205,7 +213,9 @@ Introduction: The mean filtering of F0 can effectively reduce the hoarse sound c
 
 ### [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/justinjohn0306/so-vits-svc-4.0/blob/4.0/notebooks/sovits4_colab.ipynb) [sovits4_for_colab.ipynb](https://colab.research.google.com/github/justinjohn0306/so-vits-svc-4.0/blob/4.0/notebooks/sovits4_colab.ipynb)
 
-#### [23/03/16] No longer need to download hubert manually
+**[23/03/16] No longer need to download hubert manually**
+
+**[23/04/14] Support NSF_HIFIGAN enhancer**
 
 ## 📤 Exporting to Onnx
 

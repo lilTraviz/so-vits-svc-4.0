@@ -25,6 +25,14 @@
 
 > 更新了4.0-v2模型，全部流程同4.0，相比4.0在部分场景下有一定提升，但也有些情况有退步，具体可移步[4.0-v2分支](https://github.com/svc-develop-team/so-vits-svc/tree/4.0-v2)
 
+## 📝 4.0各分支特性列表
+
+| 分支名         |     特性      |   是否与主分支模型兼容 |
+| :-------------: | :----------: | :------------:    |
+| 4.0              |   主分支   |        -     |
+| 4.0v2        |  采用了VISinger2模型  |        不兼容     |
+| 4.0-Vec768-Layer12    |  特征输入为Content Vec的第12层Transformer输出  |        不兼容     |
+
 ## 📝 模型简介
 
 歌声音色转换模型，通过SoftVC内容编码器提取源音频语音特征，与F0同时输入VITS替换原本的文本输入达到歌声转换的效果。同时，更换声码器为 [NSF HiFiGAN](https://github.com/openvpi/DiffSinger/tree/refactor/modules/nsf_hifigan) 解决断音问题
@@ -205,7 +213,9 @@ python inference_main.py -m "logs/44k/G_30400.pth" -c "configs/config.json" -n "
 
 ### [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1kv-3y2DmZo0uya8pEr1xk7cSB-4e_Pct?usp=sharing) [sovits4_for_colab.ipynb](https://colab.research.google.com/drive/1kv-3y2DmZo0uya8pEr1xk7cSB-4e_Pct?usp=sharing)
 
-#### [23/03/16] 不再需要手动下载hubert
+**[23/03/16] 不再需要手动下载hubert**
+
+**[23/04/14] 支持NSF_HIFIGAN增强器**
 
 ## 📤 Onnx导出
 
